@@ -20,7 +20,7 @@ export class SaveFile implements SaveFileUseCase {
     execute({ 
         fileContent,
         fileDestination = 'outputs',
-        fileName = 'table.txt'
+        fileName = 'table'
     }: Options): boolean {
 
         try {
@@ -29,7 +29,7 @@ export class SaveFile implements SaveFileUseCase {
             return true;
             
         } catch (error) {
-            console.error( error )
+            // console.error( error ); // winston
             return false;
         }
 
